@@ -1,6 +1,10 @@
 var dotenv = require('dotenv');
 var firebaseAdmin = require("firebase-admin");
 var algoliasearch = require('algoliasearch');
+// var express=require('express');
+// var app=express();
+//
+// app.set('port', (process.env.PORT || 5000));
 
 // load values from the .env file in this directory into process.env
 dotenv.load();
@@ -50,3 +54,10 @@ function deleteIndexRecord(dataSnapshot) {
     console.log('Firebase object deleted from Algolia', objectID);
   });
 }
+
+// app.get('/', function(request, response) {
+//     var result = 'App is running'
+//     response.send(result);
+// }).listen(app.get('port'), function() {
+//     console.log('App is running, server is listening on port ', app.get('port'));
+// });
